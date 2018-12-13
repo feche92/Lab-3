@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="./bower_components/bootstrapvalidator/dist/css/bootstrapValidator.css"/>
+
+    <script type="text/javascript" src="./bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./bower_components/bootstrapvalidator/dist/js/bootstrapValidator.js"></script>
+    <script src="app.js"></script>    
+    <script src=registro.js></script>
+    
+    <title></title>
+</head>
+<body style="background-color:rgb(90, 91, 92)">
+    <h2 class="page-header">Registro</h2>
+    <div class="container">
+        <div class="row" >
+            <div class="col-md-8 center" >
+                <form id="loginFormRegistro" method="POST" class="well form-horizontal">
+                    <div class="form-group">
+                        <label for="apellido">Apellido</label>
+                        <input type="text" class="form-control" id="apellido" name="apellido"
+                            placeholder="Introduce tu apellido">
+                    </div>
+                    <div class="form-group">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" class="form-control" id="nombre" name="nombre"
+                                placeholder="Introduce tu nombre">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" name="correo"
+                                placeholder="Introduce tu email">
+                    </div>
+                    <div class="form-group">
+                        <label for="legajo">Legajo</label>
+                        <input type="number" class="form-control" id="legajo" name="legajo"
+                            placeholder="Introduce tu email">
+                    </div>                    
+                    <div class="form-group">
+                        <label for="perfil">Perfil</label>
+                        <select class="form-control" id='perfil' name="perfil">
+                            <option selected value="invitado" >invitado</option>
+                            <option value="superAdmin">super admin</option>
+                            <option value="dueño">dueño</option>
+                            <option value="administrador">administrador</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="foto">Foto</label>
+                        <input type="file" class="form-control" id="foto" name="foto">
+                    </div>
+                    <div class="form-group">
+                        <label for="clave">Clave</label>
+                        <input type="password" class="form-control" id="clave" name="clave"
+                            placeholder="Introduce tu clave">
+                    </div>
+                    <div class="form-group">
+                        <label for="repClave">Repita clave</label>
+                        <input type="password" class="form-control" id="repClave" name="repClave"
+                             placeholder="Repita tu clave">
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <input type="submit" value="Enviar" class="btn btn-primary btn-block" id="btnAgregar" />
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <input type="reset" value="Limpiar" class="btn btn-danger btn-block"  />
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <span style="display:none" id="spanCorreo">
+                <div class="row alert alert-warning">El email ingresado ya existe!! Ingrese otro</div>
+            </span>
+        </div>
+    </div>
+</body>

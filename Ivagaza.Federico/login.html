@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="./bower_components/bootstrapvalidator/dist/css/bootstrapValidator.css"/>
+
+    <script type="text/javascript" src="./bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./bower_components/bootstrapvalidator/dist/js/bootstrapValidator.js"></script>
+    <script src="app.js"></script>
+    <script src=login.js></script>
+    
+    <title></title>
+</head>
+<body style="background-color:rgb(90, 91, 92)">
+    <h2 class="page-header">Login</h2>
+    <div class="container">
+        <div class="col-md-8 col-sm-8 col-xs-8">
+            <form id="loginForm" method="POST" class="well form-horizontal" >
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Email Adress</label>
+                    <div class="col-md-6 col-sm-12 col-xs-12 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input name="email" id="email" placeholder="Email" class="form-control" type="text">
+                        </div>
+                    </div>
+                </div>        
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Contraseña</label>
+                    <div class="col-md-6 col-sm-12 col-xs-12 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-asterisk"></i></span>
+                            <input name="password" id="password" class="form-control" type="password" placeholder="Contraseña">
+                        </div>
+                    </div>
+                </div>               
+                <div class="form-group">
+                    <label class="col-md-4 control-label"></label>
+                    <div class="col-md-3 col-sm-5 col-xs-12">
+                        <button type="submit"  class="btn btn-primary btn-block">Enviar <span class="glyphicon glyphicon-send"></span></button>
+                    </div>
+                    <div class="col-md-3 col-sm-5 col-xs-12"><button type="reset" class="btn btn-danger btn-block">Limpiar <span class="glyphicon glyphicon-send"></span></button></div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label"></label>
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                        <button  onclick="Registrar()" class="btn btn-success btn-block">Quiero registrarme <span class="glyphicon glyphicon-send"></span></button>
+                    </div>
+                </div>  
+            </form>
+            <div class="row">
+                <span style="display:none" id="spanValidar">
+                    <div class="row alert alert-warning">El usuario ingresado no existe</div>
+                </span>
+            </div>
+        </div>
+    </div>
+</body>
